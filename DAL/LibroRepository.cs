@@ -44,6 +44,23 @@ namespace DAL
             return respuesta;
         }
 
+        public string GuardarVistaLibro(LibroVisto libroVisto)
+        {
+            string respuesta = "";
+            using (var comando = Conexion.CreateCommand())
+            {
+                comando.CommandText = "insert into libro_visto(idlibro, idusuario, fecha) " +
+                                                "values(@idlibro,@idusuario,@fecha)";
+                comando.Parameters.Add("@idlibro", SqlDbType.Int).Value = libroVisto.idlibro;
+                comando.Parameters.Add("@idusuario", SqlDbType.Int).Value = libroVisto.idusuario;
+                comando.Parameters.Add("@fecha", SqlDbType.DateTime).Value = libroVisto.fecha;
+             
+                respuesta = comando.ExecuteNonQuery() == 1 ? "OK" : "NO guardo el libro";
+
+            }
+            return respuesta;
+        }
+
         private Libro MapearLibro(SqlDataReader reader)
         {
             Libro libro = new Libro();
@@ -61,6 +78,43 @@ namespace DAL
 
             return libro;
         }
+
+        public IList<Libro> BuscarLibroPorNombre(string nombre)
+        {
+            lista = new List<Libro>();
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "select * From libro where nombre like @nombre + '%'";
+                Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+                SqlDataReader reader = Comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    Libro libro = new Libro();
+                    libro = MapearLibro(reader);
+                    lista.Add(libro);
+                }
+                return lista;
+            }
+        }
+
+        public IList<Libro> BuscarLibroPorCodigo(string codigo)
+        {
+            lista = new List<Libro>();
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "select * From libro where codigo like @codigo + '%'";
+                Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = codigo;
+                SqlDataReader reader = Comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    Libro libro = new Libro();
+                    libro = MapearLibro(reader);
+                    lista.Add(libro);
+                }
+                return lista;
+            }
+        }
+
         public IList<Libro> ConsultarLibro()
         {
             lista = new List<Libro>();

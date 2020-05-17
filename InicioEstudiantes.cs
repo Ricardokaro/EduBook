@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using ENTITY;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace EduBook
 {
     public partial class InicioEstudiantes : MetroFramework.Forms.MetroForm
     {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario;
         public InicioEstudiantes()
         {
             InitializeComponent();
+          
         }
 
         private void InicioEstudiantes_Load(object sender, EventArgs e)
@@ -50,5 +55,7 @@ namespace EduBook
             Form ConsultarEstadisticasEstudiante = new ConsultarEstadisticasEstudiante();
             ConsultarEstadisticasEstudiante.Show();
         }
+
+        
     }
 }

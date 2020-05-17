@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 369);
+            this.ClientSize = new System.Drawing.Size(439, 369);
             this.Controls.Add(this.Estadistica);
             this.Controls.Add(this.GestionarLibro);
             this.Controls.Add(this.GestionarUsuario);

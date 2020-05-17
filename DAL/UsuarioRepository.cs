@@ -58,6 +58,7 @@ namespace DAL
             usuario.fotoPerfil = (byte[])reader["foto_perfil"];
             usuario.tipoUsuario = (string)reader["tipo_usuario"];
             usuario.password = (string)reader["password"];
+            usuario.inicio_session = (bool)reader["inicio_session"];
 
             return usuario;
         }
@@ -127,6 +128,61 @@ namespace DAL
                 respuesta = Comando.ExecuteNonQuery() == 1 ? "OK" : "NO Elimino el usuario";
             }
             return respuesta;
+        }
+
+        public Usuario Login(Usuario usuario)
+        {
+            foreach (Usuario item in ConsultarUsuario())
+            {
+                if (item.numeroDocumento == usuario.numeroDocumento && item.password == usuario.password)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+
+        public bool GuardarSession(Usuario usuario)
+        {
+            bool respuesta = false;
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "update usuario set inicio_session = @inicio_session where idusuario = @idusuario";
+                Comando.Parameters.Add("@idusuario", SqlDbType.Int).Value = usuario.idusuario;
+                Comando.Parameters.Add("@inicio_session", SqlDbType.Bit).Value = usuario.inicio_session;
+                respuesta = Comando.ExecuteNonQuery() == 1 ? true : false;
+            }
+            return respuesta;
+        }
+
+        public bool EliminarSession()
+        {
+            bool respuesta = false;
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "update usuario set inicio_session = @inicio_session";
+                Comando.Parameters.Add("@inicio_session", SqlDbType.Bit).Value = false;
+                respuesta = Comando.ExecuteNonQuery() == 1 ? true : false;
+            }
+            return respuesta;
+        }
+
+        public Usuario ConsultarSession() 
+        {            
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Usuario usuario = null;
+                Comando.CommandText = "Select * From Usuario";
+                SqlDataReader reader = Comando.ExecuteReader();                
+                while (reader.Read())
+                { 
+                    if ((bool)reader["inicio_session"]) {
+                        usuario = new Usuario();
+                        usuario = MapearUsuario(reader);
+                    }
+                }
+                return usuario;
+            }
         }
     }    
 }

@@ -75,7 +75,9 @@
             this.TextUsuario.Size = new System.Drawing.Size(208, 44);
             this.TextUsuario.TabIndex = 4;
             this.TextUsuario.Text = "Ingrese Usuario";
-            this.TextUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            
+           
             // 
             // TextContraseña
             // 
@@ -84,7 +86,7 @@
             this.TextContraseña.ForeColor = System.Drawing.Color.Silver;
             this.TextContraseña.HintForeColor = System.Drawing.Color.Empty;
             this.TextContraseña.HintText = "";
-            this.TextContraseña.isPassword = false;
+            this.TextContraseña.isPassword = true;
             this.TextContraseña.LineFocusedColor = System.Drawing.Color.Green;
             this.TextContraseña.LineIdleColor = System.Drawing.Color.Black;
             this.TextContraseña.LineMouseHoverColor = System.Drawing.Color.DarkGreen;
@@ -94,8 +96,9 @@
             this.TextContraseña.Name = "TextContraseña";
             this.TextContraseña.Size = new System.Drawing.Size(208, 44);
             this.TextContraseña.TabIndex = 4;
-            this.TextContraseña.Text = "Ingrese Contraseña";
-            this.TextContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextContraseña.Text = "Ingrese contr";
+            this.TextContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            
             // 
             // BotonIngresar
             // 

@@ -34,7 +34,6 @@
             this.Estadisticas = new System.Windows.Forms.PictureBox();
             this.ConsultarLibrosEstudiante = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Estadisticas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultarLibrosEstudiante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -44,7 +43,7 @@
             // 
             this.Estadistica.AutoSize = true;
             this.Estadistica.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estadistica.Location = new System.Drawing.Point(104, 229);
+            this.Estadistica.Location = new System.Drawing.Point(112, 216);
             this.Estadistica.Name = "Estadistica";
             this.Estadistica.Size = new System.Drawing.Size(177, 32);
             this.Estadistica.TabIndex = 11;
@@ -55,7 +54,7 @@
             // 
             this.ConsultarLibroEstudiante.AutoSize = true;
             this.ConsultarLibroEstudiante.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConsultarLibroEstudiante.Location = new System.Drawing.Point(104, 154);
+            this.ConsultarLibroEstudiante.Location = new System.Drawing.Point(112, 141);
             this.ConsultarLibroEstudiante.Name = "ConsultarLibroEstudiante";
             this.ConsultarLibroEstudiante.Size = new System.Drawing.Size(218, 32);
             this.ConsultarLibroEstudiante.TabIndex = 12;
@@ -65,7 +64,7 @@
             // Estadisticas
             // 
             this.Estadisticas.Image = ((System.Drawing.Image)(resources.GetObject("Estadisticas.Image")));
-            this.Estadisticas.Location = new System.Drawing.Point(28, 213);
+            this.Estadisticas.Location = new System.Drawing.Point(36, 200);
             this.Estadisticas.Name = "Estadisticas";
             this.Estadisticas.Size = new System.Drawing.Size(64, 64);
             this.Estadisticas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -76,7 +75,7 @@
             // ConsultarLibrosEstudiante
             // 
             this.ConsultarLibrosEstudiante.Image = ((System.Drawing.Image)(resources.GetObject("ConsultarLibrosEstudiante.Image")));
-            this.ConsultarLibrosEstudiante.Location = new System.Drawing.Point(28, 143);
+            this.ConsultarLibrosEstudiante.Location = new System.Drawing.Point(36, 130);
             this.ConsultarLibrosEstudiante.Name = "ConsultarLibrosEstudiante";
             this.ConsultarLibrosEstudiante.Size = new System.Drawing.Size(64, 64);
             this.ConsultarLibrosEstudiante.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,34 +86,23 @@
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(132, 30);
+            this.Logo.Location = new System.Drawing.Point(138, 34);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(90, 61);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo.TabIndex = 8;
+            this.Logo.TabIndex = 13;
             this.Logo.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 32);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Inicio Estudiante";
             // 
             // InicioEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 323);
+            this.ClientSize = new System.Drawing.Size(365, 296);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.Estadistica);
             this.Controls.Add(this.ConsultarLibroEstudiante);
             this.Controls.Add(this.Estadisticas);
             this.Controls.Add(this.ConsultarLibrosEstudiante);
-            this.Controls.Add(this.Logo);
-            this.Controls.Add(this.label1);
             this.Name = "InicioEstudiantes";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Load += new System.EventHandler(this.InicioEstudiantes_Load);
@@ -133,6 +121,5 @@
         private System.Windows.Forms.PictureBox Estadisticas;
         private System.Windows.Forms.PictureBox ConsultarLibrosEstudiante;
         private System.Windows.Forms.PictureBox Logo;
-        private System.Windows.Forms.Label label1;
     }
 }

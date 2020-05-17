@@ -100,6 +100,44 @@ namespace BLL
             }
         }
 
+        public bool GuardarSession(Usuario usuario)
+        {
+            try
+            {
+
+                conexion.Open();
+                return Repositorio.GuardarSession(usuario);
+
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        public Usuario ConsultarSession()
+        {
+            try
+            {
+
+                conexion.Open();
+                return Repositorio.ConsultarSession();
+
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
         public string EliminarUsuario(Usuario usuario)
         {
             try
@@ -112,6 +150,46 @@ namespace BLL
             catch (Exception e)
             {
                 return "Error Al eliminar: " + e.Message;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        public Usuario Login(string NumeroDocumento, string password)
+        {
+            try
+            {
+                conexion.Open();
+                Usuario usuario = new Usuario();
+                usuario.numeroDocumento = NumeroDocumento;
+                usuario.password = password;
+                usuario = Repositorio.Login(usuario);
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            finally 
+            {
+                conexion.Close();
+            }
+           
+        }
+        public bool EliminarSession()
+        {
+            try
+            {
+
+                conexion.Open();
+                return Repositorio.EliminarSession();
+
+            }
+            catch (Exception e)
+            {
+                return false;
             }
             finally
             {

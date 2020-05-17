@@ -20,7 +20,7 @@ namespace ENTITY
         public byte[] fotoPerfil { get; set; }
         public string tipoUsuario { get; set; }
         public string password { get; set; }
-
+        public bool inicio_session { get; set; }
 
         public Usuario(string tipoDocumento, string numeroDocumento, string nombre, string apellidos, string genero
             , int edad, string email,byte[] fotoPerfil, string tipoUsuario, string password)

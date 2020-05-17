@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ENTITY;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,15 +12,15 @@ using System.Windows.Forms;
 namespace EduBook
 {
     public partial class InicioAdministrador : MetroFramework.Forms.MetroForm
-    {
+    {       
         public InicioAdministrador()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         private void InicioAdministrador_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void GestionarUsuarios_Click(object sender, EventArgs e)

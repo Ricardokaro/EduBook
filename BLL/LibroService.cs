@@ -37,6 +37,24 @@ namespace BLL
                 conexion.Close();
             }
 
+        }        
+
+        public string GuardarVistaLibro(LibroVisto libroVisto)
+        {
+            try
+            {
+                conexion.Open();
+                return Repositorio.GuardarVistaLibro(libroVisto);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
         }
 
         public Libro BuscarLibro(string codigo)
@@ -47,6 +65,44 @@ namespace BLL
             libro = Repositorio.BuscarLibro(libro);
             conexion.Close();
             return libro;
+        }
+
+        public IList<Libro> BuscarLibroPorNombre(string nombre)
+        {
+            IList<Libro> Lista = new List<Libro>();
+            try
+            {
+                conexion.Open();
+                Lista = Repositorio.BuscarLibroPorNombre(nombre);
+                return Lista;
+            }
+            catch (Exception e)
+            {
+                return lista;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        public IList<Libro> BuscarLibroPorCodigo(string codigo)
+        {
+            IList<Libro> Lista = new List<Libro>();
+            try
+            {
+                conexion.Open();
+                Lista = Repositorio.BuscarLibroPorCodigo(codigo);
+                return Lista;
+            }
+            catch (Exception e)
+            {
+                return lista;
+            }
+            finally
+            {
+                conexion.Close();
+            }
         }
         public IList<Libro> ConsultarLista()
         {
@@ -66,6 +122,8 @@ namespace BLL
                 conexion.Close();
             }
         }
+
+
         public Libro ConsultarLibro(string Auxiliar)
         {
             IList<Libro> Lista = new List<Libro>();

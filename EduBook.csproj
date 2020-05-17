@@ -276,6 +276,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\descargar.png" />
     <None Include="Resources\file.png" />
     <None Include="Resources\lista.png" />
     <None Include="Resources\foto perfil%282%29.png" />
