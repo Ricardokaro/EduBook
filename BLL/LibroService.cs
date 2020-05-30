@@ -14,6 +14,7 @@ namespace BLL
         SqlConnection conexion;
         LibroRepository Repositorio;
         IList<Libro> lista;
+        IList<LibroMasVisto> listaLibrosMasVistos;
 
         public LibroService()
         {
@@ -123,6 +124,44 @@ namespace BLL
             }
         }
 
+        public IList<LibroMasVisto> ConsultarLibroMasVistoPorEstudiante()
+        {
+            IList<LibroMasVisto> listaLibrosMasVistos = new List<LibroMasVisto>();
+            try
+            {
+                conexion.Open();
+                listaLibrosMasVistos = Repositorio.ConsultarLibroMasVistoPorEstudiante();
+                return listaLibrosMasVistos;
+            }
+            catch (Exception e)
+            {
+                return listaLibrosMasVistos;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        public IList<LibroMasVisto> ConsultarLibroMasVistoPorInvitado()
+        {
+            IList<LibroMasVisto> listaLibrosMasVistos = new List<LibroMasVisto>();
+            try
+            {
+                conexion.Open();
+                listaLibrosMasVistos = Repositorio.ConsultarLibroMasVistoPorInvitado();
+                return listaLibrosMasVistos;
+            }
+            catch (Exception e)
+            {
+                return listaLibrosMasVistos;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
 
         public Libro ConsultarLibro(string Auxiliar)
         {
@@ -139,6 +178,8 @@ namespace BLL
             }
             return libroEncontrado;
         }
+
+        
         public string EditarLibro(Libro libro)
         {
             try

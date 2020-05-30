@@ -33,19 +33,19 @@
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.txtSeleccionarBusqueda = new MetroFramework.Controls.MetroComboBox();
             this.dataListadoLibros = new System.Windows.Forms.DataGridView();
-            this.txtBuscadorDeLibros = new Bunifu.Framework.UI.BunifuTextbox();
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.pdfLibro = new AxAcroPDFLib.AxAcroPDF();
             this.BotonDescargar = new System.Windows.Forms.PictureBox();
+            this.txtBuscadorDeLibros = new Bunifu.Framework.UI.BunifuTextbox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.BotonRegresar = new System.Windows.Forms.PictureBox();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoLibros)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pdfLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonDescargar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonRegresar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,13 +53,13 @@
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Location = new System.Drawing.Point(14, 39);
+            this.metroTabControl1.Location = new System.Drawing.Point(13, 42);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(769, 404);
             this.metroTabControl1.TabIndex = 15;
-            this.metroTabControl1.UseSelectable = true;            
+            this.metroTabControl1.UseSelectable = true;
             this.metroTabControl1.Click += new System.EventHandler(this.metroTabControl1_Click);
             // 
             // metroTabPage1
@@ -106,31 +106,8 @@
             this.dataListadoLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListadoLibros.Size = new System.Drawing.Size(439, 208);
             this.dataListadoLibros.TabIndex = 11;
+            this.dataListadoLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoLibros_CellContentClick);
             this.dataListadoLibros.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataListadoLibros_MouseDoubleClick);
-            // 
-            // txtBuscadorDeLibros
-            // 
-            this.txtBuscadorDeLibros.BackColor = System.Drawing.Color.White;
-            this.txtBuscadorDeLibros.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBuscadorDeLibros.BackgroundImage")));
-            this.txtBuscadorDeLibros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtBuscadorDeLibros.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txtBuscadorDeLibros.Icon = ((System.Drawing.Image)(resources.GetObject("txtBuscadorDeLibros.Icon")));
-            this.txtBuscadorDeLibros.Location = new System.Drawing.Point(323, 47);
-            this.txtBuscadorDeLibros.Name = "txtBuscadorDeLibros";
-            this.txtBuscadorDeLibros.Size = new System.Drawing.Size(263, 29);
-            this.txtBuscadorDeLibros.TabIndex = 10;
-            this.txtBuscadorDeLibros.text = "";
-            this.txtBuscadorDeLibros.OnTextChange += new System.EventHandler(this.BuscadorDeLibros_OnTextChange);
-            // 
-            // Logo
-            // 
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(15, 3);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(132, 95);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo.TabIndex = 9;
-            this.Logo.TabStop = false;
             // 
             // metroTabPage2
             // 
@@ -165,6 +142,31 @@
             this.BotonDescargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BotonDescargar.TabIndex = 79;
             this.BotonDescargar.TabStop = false;
+            this.BotonDescargar.Click += new System.EventHandler(this.BotonDescargar_Click);
+            // 
+            // txtBuscadorDeLibros
+            // 
+            this.txtBuscadorDeLibros.BackColor = System.Drawing.Color.White;
+            this.txtBuscadorDeLibros.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBuscadorDeLibros.BackgroundImage")));
+            this.txtBuscadorDeLibros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtBuscadorDeLibros.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txtBuscadorDeLibros.Icon = ((System.Drawing.Image)(resources.GetObject("txtBuscadorDeLibros.Icon")));
+            this.txtBuscadorDeLibros.Location = new System.Drawing.Point(323, 47);
+            this.txtBuscadorDeLibros.Name = "txtBuscadorDeLibros";
+            this.txtBuscadorDeLibros.Size = new System.Drawing.Size(263, 29);
+            this.txtBuscadorDeLibros.TabIndex = 10;
+            this.txtBuscadorDeLibros.text = "";
+            this.txtBuscadorDeLibros.OnTextChange += new System.EventHandler(this.BuscadorDeLibros_OnTextChange);
+            // 
+            // Logo
+            // 
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(15, 3);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(132, 95);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 9;
+            this.Logo.TabStop = false;
             // 
             // BotonRegresar
             // 
@@ -191,10 +193,10 @@
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoLibros)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pdfLibro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonDescargar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonRegresar)).EndInit();
             this.ResumeLayout(false);
 

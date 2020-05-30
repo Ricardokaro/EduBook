@@ -35,5 +35,20 @@ namespace EduBook
             Form InicioEstudiante = new InicioEstudiantes();
             InicioEstudiante.Show();
         }
+
+        private void EstadisticasLibroEstudiante_Click(object sender, EventArgs e)
+        {
+            EstadisticaEstudiante estadisticaEstudiante = new EstadisticaEstudiante();
+            if (PanelContenedor.Contains(estadisticaEstudiante) == false)
+            {
+                PanelContenedor.Controls.Add(estadisticaEstudiante);
+                estadisticaEstudiante.Dock = DockStyle.Fill;
+                estadisticaEstudiante.BringToFront();
+            }
+            else
+            {
+                estadisticaEstudiante.BringToFront();
+            }
+        }
     }
 }

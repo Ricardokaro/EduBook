@@ -48,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -88,6 +89,18 @@
     </Compile>
     <Compile Include="ConsultarUsuario.Designer.cs">
       <DependentUpon>ConsultarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstadisticaEstudiante.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EstadisticaEstudiante.Designer.cs">
+      <DependentUpon>EstadisticaEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstadisticaEstudianteInvitadoLibroMasVisto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EstadisticaEstudianteInvitadoLibroMasVisto.Designer.cs">
+      <DependentUpon>EstadisticaEstudianteInvitadoLibroMasVisto.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionarAutor.cs">
       <SubType>UserControl</SubType>
@@ -201,6 +214,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarUsuario.resx">
       <DependentUpon>ConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticaEstudiante.resx">
+      <DependentUpon>EstadisticaEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticaEstudianteInvitadoLibroMasVisto.resx">
+      <DependentUpon>EstadisticaEstudianteInvitadoLibroMasVisto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarAutor.resx">
       <DependentUpon>GestionarAutor.cs</DependentUpon>

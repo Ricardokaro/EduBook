@@ -15,6 +15,7 @@ namespace DAL
         private SqlDataAdapter reader;
         private SqlCommand Comando;
         List<Libro> lista;
+        List<LibroMasVisto> listaLibroMasVisto;
         public LibroRepository(SqlConnection conexion)
         {
             this.Conexion = conexion;
@@ -79,6 +80,16 @@ namespace DAL
             return libro;
         }
 
+        private LibroMasVisto MapearLibroMasVisto(SqlDataReader reader)
+        {
+            LibroMasVisto libro = new LibroMasVisto();
+
+            libro.nombre = (string)reader["nombre"];
+            libro.total = (int)reader["total"];           
+
+            return libro;
+        }
+
         public IList<Libro> BuscarLibroPorNombre(string nombre)
         {
             lista = new List<Libro>();
@@ -131,6 +142,52 @@ namespace DAL
                 return lista;
             }
         }
+        public IList<LibroMasVisto> ConsultarLibroMasVistoPorEstudiante()
+        {
+            listaLibroMasVisto = new List<LibroMasVisto>();
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "select top 8 l.nombre, count(*) as total   from libro l inner join libro_visto lv " 
+                                       + "on l.idlibro = lv.idlibro "
+                                       + "inner join usuario u on u.idusuario = lv.idusuario "
+                                       + "where u.tipo_usuario = 'Estudiante' "
+                                       + "group by(l.nombre) "
+                                       + "order by total desc";
+                
+                SqlDataReader reader = Comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    LibroMasVisto libro = new LibroMasVisto();
+                    libro = MapearLibroMasVisto(reader);
+                    listaLibroMasVisto.Add(libro);
+                }
+                return listaLibroMasVisto;
+            }
+        }
+
+        public IList<LibroMasVisto> ConsultarLibroMasVistoPorInvitado()
+        {
+            listaLibroMasVisto = new List<LibroMasVisto>();
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "select top 8 l.nombre, count(*) as total   from libro l inner join libro_visto lv "
+                                       + "on l.idlibro = lv.idlibro "
+                                       + "inner join usuario u on u.idusuario = lv.idusuario "
+                                       + "where u.tipo_usuario = 'Invitado' "
+                                       + "group by(l.nombre) "
+                                       + "order by total desc";
+
+                SqlDataReader reader = Comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    LibroMasVisto libro = new LibroMasVisto();
+                    libro = MapearLibroMasVisto(reader);
+                    listaLibroMasVisto.Add(libro);
+                }
+                return listaLibroMasVisto;
+            }
+        }
+
         public Libro BuscarLibro(Libro libro)
         {
             foreach (Libro item in ConsultarLibro())

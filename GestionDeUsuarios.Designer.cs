@@ -34,15 +34,15 @@
             this.Regresar = new System.Windows.Forms.Label();
             this.Eliminar = new System.Windows.Forms.Label();
             this.Modificar = new System.Windows.Forms.Label();
-            this.BotonRegresar = new System.Windows.Forms.PictureBox();
             this.Consultar = new System.Windows.Forms.Label();
             this.Registrar = new System.Windows.Forms.Label();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.BotonRegresar = new System.Windows.Forms.PictureBox();
             this.EliminarUsuario = new System.Windows.Forms.PictureBox();
             this.ModificarUsuario = new System.Windows.Forms.PictureBox();
             this.ConsultarUsuario = new System.Windows.Forms.PictureBox();
             this.BotonRegistrarUsuario = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUsuario)).BeginInit();
@@ -117,17 +117,6 @@
             this.Modificar.Text = "Modificar";
             this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
             // 
-            // BotonRegresar
-            // 
-            this.BotonRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BotonRegresar.Image")));
-            this.BotonRegresar.Location = new System.Drawing.Point(1, 415);
-            this.BotonRegresar.Name = "BotonRegresar";
-            this.BotonRegresar.Size = new System.Drawing.Size(48, 48);
-            this.BotonRegresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.BotonRegresar.TabIndex = 4;
-            this.BotonRegresar.TabStop = false;
-            this.BotonRegresar.Click += new System.EventHandler(this.BotonRegresar_Click);
-            // 
             // Consultar
             // 
             this.Consultar.AutoSize = true;
@@ -151,6 +140,25 @@
             this.Registrar.TabIndex = 4;
             this.Registrar.Text = "Registrar";
             this.Registrar.Click += new System.EventHandler(this.Registrar_Click);
+            // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.BackColor = System.Drawing.Color.White;
+            this.PanelContenedor.Location = new System.Drawing.Point(179, 47);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(549, 675);
+            this.PanelContenedor.TabIndex = 5;
+            // 
+            // BotonRegresar
+            // 
+            this.BotonRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BotonRegresar.Image")));
+            this.BotonRegresar.Location = new System.Drawing.Point(1, 415);
+            this.BotonRegresar.Name = "BotonRegresar";
+            this.BotonRegresar.Size = new System.Drawing.Size(48, 48);
+            this.BotonRegresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.BotonRegresar.TabIndex = 4;
+            this.BotonRegresar.TabStop = false;
+            this.BotonRegresar.Click += new System.EventHandler(this.BotonRegresar_Click);
             // 
             // EliminarUsuario
             // 
@@ -205,14 +213,6 @@
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 4;
             this.Logo.TabStop = false;
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.BackColor = System.Drawing.Color.White;
-            this.PanelContenedor.Location = new System.Drawing.Point(179, 47);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(549, 675);
-            this.PanelContenedor.TabIndex = 5;
             // 
             // GestionDeUsuarios
             // 

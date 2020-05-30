@@ -21,5 +21,20 @@ namespace EduBook
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            EstadisticaEstudianteInvitadoLibroMasVisto estadisticaEstudianteInvitadoLibroMasVisto = new EstadisticaEstudianteInvitadoLibroMasVisto();
+            if (PanelContenedor.Contains(estadisticaEstudianteInvitadoLibroMasVisto) == false)
+            {
+                PanelContenedor.Controls.Add(estadisticaEstudianteInvitadoLibroMasVisto);
+                estadisticaEstudianteInvitadoLibroMasVisto.Dock = DockStyle.Fill;
+                estadisticaEstudianteInvitadoLibroMasVisto.BringToFront();
+            }
+            else
+            {
+                estadisticaEstudianteInvitadoLibroMasVisto.BringToFront();
+            }
+        }
     }
 }

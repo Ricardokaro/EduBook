@@ -140,18 +140,17 @@
   </data>
   <data name="ModificarUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIrSURBVGhD7Vk9TsMwGE0jOAASc+ECVdKWgZ+ZlYmVY3AC
-        rsBQ8bMgJkCoQ7kAV+AGdAQJsSAhUeC99ktk2hhaO3aC5Cc9mTr283vO18ihURlot9tb4G2n03kGP7vd
-        7lcReY1jODZN022ZXi1g6BD8KDL8GzmHc0WmGmAn92BCu+N/kXOpIXL+AQMPRcYWITVEzi+weNNm9xVS
-        oymy/gDzm1NGjMmHgMj6A58iRWZMmCTJjsj6QwigMAQwQQigMAQwQQigMAQwQQigMAQwQe0D4Ii7gSPz
-        Od9f0fanif77IjMmpJZmDa59hjEdsTU/sMP7mFzGC4st+dp5ILYWAyYeFwj65iWsNCaOFkcst7BI2Dmx
-        9g3aZfFijEYVIWgeay9NLNgjhujp9CKuCPPXaK13fhpeyqmsstHBaTmVXTY6OCknV2WjQ6nl5LpsdCil
-        nHyVjQ5W5eS7bHQwKqeqykaHhcqp6rLRYa5yKr1sIPaUEeIX0m2KGAfAExrV8Aq0Mk+P0Mg9M0C+AC72
-        ZZwNGjzFQuvHURx9PFValw09qrouAowBLf529ga+g0foiidX7ECPqmdnAYhWq7UC3VX5WAq8BnCBEKBq
-        zARAx0gJcCfjagv4HCh+RwzwqHS84HG3JmNrB3qjR8XvkAF6WUcWAu0A7cz/aaqkeMrNi9delCTJOv54
-        VS/8B9IzvY9vTZqmu/8pBL3S89h8BrkTPXAI5l/supCexFsv3/koir4B5LcUp8KXilYAAAAASUVORK5C
-        YII=
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAitJREFUaEPtWT1OwzAYTSM4ABJz4QJV0paBn5mViZVjcAKuwFDxsyAmQKhDuQBX
+        4AZ0BAmxICFR4L32S2TaGFo7doLkJz2ZOvbze87XyKFRGWi321vgbafTeQY/u93uVxF5jWM4Nk3TbZle
+        LWDoEPwoMvwbOYdzRaYaYCf3YEK743+Rc6khcv4BAw9FxhYhNUTOL7B402b3FVKjKbL+APObU0aMyYeA
+        yPoDnyJFZkyYJMmOyPpDCKAwBDBBCKAwBDBBCKAwBDBBCKAwBDBB7QPgiLuBI/M531/R9qeJ/vsiMyak
+        lmYNrn2GMR2xNT+ww/uYXMYLiy352nkgthYDJh4XCPrmJaw0Jo4WRyy3sEjYObH2Ddpl8WKMRhUhaB5r
+        L00s2COG6On0Iq4I89dorXd+Gl7Kqayy0cFpOZVdNjo4KSdXZaNDqeXkumx0KKWcfJWNDlbl5LtsdDAq
+        p6rKRoeFyqnqstFhrnIqvWwg9pQR4hfSbYoYB8ATGtXwCrQyT4/QyD0zQL4ALvZlnA0aPMVC68dRHH08
+        VVqXDT2qui4CjAEt/nb2Br6DR+iKJ1fsQI+qZ2cBiFartQLdVflYCrwGcIEQoGrMBEDHSAlwJ+NqC/gc
+        KH5HDPCodLzgcbcmY2sHeqNHxe+QAXpZRxYC7QDtzP9pqqR4ys2L116UJMk6/nhVL/wH0jO9j29Nmqa7
+        /ykEvdLz2HwGuRM9cAjmX+y6kJ7EWy/f+SiKvgHktxSnwpeKVgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="ConsultarUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

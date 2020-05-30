@@ -151,5 +151,15 @@ namespace EduBook
                 BotonDescargar.Visible = true;
             }
         }
+
+        private void dataListadoLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BotonDescargar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

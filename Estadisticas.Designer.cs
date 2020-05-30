@@ -32,12 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ModificarUsuario = new System.Windows.Forms.PictureBox();
             this.ConsultarUsuario = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.PanelContenedor = new MetroFramework.Controls.MetroPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModificarUsuario)).BeginInit();
@@ -82,16 +83,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Descargas";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 284);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -102,6 +93,27 @@
             this.label4.Size = new System.Drawing.Size(86, 28);
             this.label4.TabIndex = 4;
             this.label4.Text = "Libros";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(266, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(343, 32);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Consulta De Estadisticas";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(4, 284);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
             // 
             // ModificarUsuario
             // 
@@ -133,21 +145,25 @@
             this.Logo.TabIndex = 4;
             this.Logo.TabStop = false;
             // 
-            // label1
+            // PanelContenedor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 32);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Consulta De Estadisticas";
+            this.PanelContenedor.HorizontalScrollbarBarColor = true;
+            this.PanelContenedor.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelContenedor.HorizontalScrollbarSize = 10;
+            this.PanelContenedor.Location = new System.Drawing.Point(208, 63);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(583, 352);
+            this.PanelContenedor.TabIndex = 7;
+            this.PanelContenedor.VerticalScrollbarBarColor = true;
+            this.PanelContenedor.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelContenedor.VerticalScrollbarSize = 10;
             // 
             // Estadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 354);
+            this.ClientSize = new System.Drawing.Size(814, 438);
+            this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "Estadisticas";
@@ -175,5 +191,6 @@
         private System.Windows.Forms.PictureBox ConsultarUsuario;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroPanel PanelContenedor;
     }
 }
