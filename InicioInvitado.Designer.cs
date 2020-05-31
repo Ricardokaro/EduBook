@@ -31,13 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioInvitado));
             this.Estadistica = new System.Windows.Forms.Label();
             this.ConsultarLibroInvitado = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Estadisticas = new System.Windows.Forms.PictureBox();
             this.ConsultarLibrosInvitado = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Estadisticas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultarLibrosInvitado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Estadistica
@@ -61,6 +63,16 @@
             this.ConsultarLibroInvitado.TabIndex = 18;
             this.ConsultarLibroInvitado.Text = "Consultar Libro";
             this.ConsultarLibroInvitado.Click += new System.EventHandler(this.ConsultarLibroInvitado_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(80, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 32);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Inicio Invitado";
             // 
             // Estadisticas
             // 
@@ -94,21 +106,23 @@
             this.Logo.TabIndex = 14;
             this.Logo.TabStop = false;
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 32);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Inicio Invitado";
+            this.pictureBox1.Image = global::EduBook.Properties.Resources.flecha__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(274, 290);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // InicioInvitado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 310);
+            this.ClientSize = new System.Drawing.Size(347, 340);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Estadistica);
             this.Controls.Add(this.ConsultarLibroInvitado);
             this.Controls.Add(this.Estadisticas);
@@ -121,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Estadisticas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultarLibrosInvitado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +149,6 @@
         private System.Windows.Forms.PictureBox ConsultarLibrosInvitado;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

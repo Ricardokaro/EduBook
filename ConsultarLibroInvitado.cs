@@ -171,5 +171,12 @@ namespace EduBook
                 this.BuscarLibroPorCodigo();
             }
         }
+
+        private void BotonRegresar_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+            Form InicioInvitado = new InicioInvitado();
+            InicioInvitado.Show();
+        }
     }
 }

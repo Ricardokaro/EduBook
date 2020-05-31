@@ -38,6 +38,7 @@
             this.BotonEstadisticasDescargas = new System.Windows.Forms.PictureBox();
             this.BotonEstaditicasLibro = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.PanelContenedor = new MetroFramework.Controls.MetroPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonEstadisticasDescargas)).BeginInit();
@@ -113,6 +114,7 @@
             this.EstadisticasLibro.Size = new System.Drawing.Size(86, 28);
             this.EstadisticasLibro.TabIndex = 4;
             this.EstadisticasLibro.Text = "Libros";
+            this.EstadisticasLibro.Click += new System.EventHandler(this.EstadisticasLibro_Click);
             // 
             // BotonEstadisticasDescargas
             // 
@@ -144,11 +146,25 @@
             this.Logo.TabIndex = 4;
             this.Logo.TabStop = false;
             // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.HorizontalScrollbarBarColor = true;
+            this.PanelContenedor.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelContenedor.HorizontalScrollbarSize = 10;
+            this.PanelContenedor.Location = new System.Drawing.Point(249, 63);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(449, 305);
+            this.PanelContenedor.TabIndex = 11;
+            this.PanelContenedor.VerticalScrollbarBarColor = true;
+            this.PanelContenedor.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelContenedor.VerticalScrollbarSize = 10;
+            // 
             // BotonRegresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 350);
+            this.ClientSize = new System.Drawing.Size(761, 384);
+            this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "BotonRegresa";
@@ -176,5 +192,6 @@
         private System.Windows.Forms.PictureBox BotonEstadisticasDescargas;
         private System.Windows.Forms.PictureBox BotonEstaditicasLibro;
         private System.Windows.Forms.PictureBox Logo;
+        private MetroFramework.Controls.MetroPanel PanelContenedor;
     }
 }

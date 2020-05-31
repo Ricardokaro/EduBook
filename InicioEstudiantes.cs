@@ -56,6 +56,11 @@ namespace EduBook
             ConsultarEstadisticasEstudiante.Show();
         }
 
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form IniciarSesion = new IniciarSesion();
+            IniciarSesion.Show();
+        }
     }
 }

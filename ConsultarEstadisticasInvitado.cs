@@ -28,5 +28,20 @@ namespace EduBook
             Form InicioInvitado = new InicioInvitado();
             InicioInvitado.Show();
         }
+
+        private void EstadisticasLibro_Click(object sender, EventArgs e)
+        {
+            EstadisticaInvitado estadisticaInvitado = new EstadisticaInvitado();
+            if (PanelContenedor.Contains(estadisticaInvitado) == false)
+            {
+                PanelContenedor.Controls.Add(estadisticaInvitado);
+                estadisticaInvitado.Dock = DockStyle.Fill;
+                estadisticaInvitado.BringToFront();
+            }
+            else
+            {
+                estadisticaInvitado.BringToFront();
+            }
+        }
     }
 }

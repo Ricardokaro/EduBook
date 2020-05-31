@@ -23,7 +23,7 @@ namespace EduBook
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            usuarioService.EliminarSession();
         }
 
         private void BotonIngresar_Click(object sender, EventArgs e)

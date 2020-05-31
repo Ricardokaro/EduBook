@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioEstudiantes));
             this.Estadistica = new System.Windows.Forms.Label();
             this.ConsultarLibroEstudiante = new System.Windows.Forms.Label();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.Estadisticas = new System.Windows.Forms.PictureBox();
             this.ConsultarLibrosEstudiante = new System.Windows.Forms.PictureBox();
-            this.Logo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Estadisticas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultarLibrosEstudiante)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Estadistica
@@ -61,6 +63,16 @@
             this.ConsultarLibroEstudiante.Text = "Consultar Libro";
             this.ConsultarLibroEstudiante.Click += new System.EventHandler(this.ConsultarLibroEstudiante_Click);
             // 
+            // Logo
+            // 
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(138, 34);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(90, 61);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 13;
+            this.Logo.TabStop = false;
+            // 
             // Estadisticas
             // 
             this.Estadisticas.Image = ((System.Drawing.Image)(resources.GetObject("Estadisticas.Image")));
@@ -83,21 +95,23 @@
             this.ConsultarLibrosEstudiante.TabStop = false;
             this.ConsultarLibrosEstudiante.Click += new System.EventHandler(this.ConsultarLibrosEstudiante_Click);
             // 
-            // Logo
+            // pictureBox1
             // 
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(138, 34);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(90, 61);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo.TabIndex = 13;
-            this.Logo.TabStop = false;
+            this.pictureBox1.Image = global::EduBook.Properties.Resources.flecha__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(292, 287);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // InicioEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 296);
+            this.ClientSize = new System.Drawing.Size(365, 330);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.Estadistica);
             this.Controls.Add(this.ConsultarLibroEstudiante);
@@ -106,9 +120,10 @@
             this.Name = "InicioEstudiantes";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Load += new System.EventHandler(this.InicioEstudiantes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Estadisticas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultarLibrosEstudiante)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +136,6 @@
         private System.Windows.Forms.PictureBox Estadisticas;
         private System.Windows.Forms.PictureBox ConsultarLibrosEstudiante;
         private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

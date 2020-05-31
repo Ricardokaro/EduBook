@@ -36,5 +36,12 @@ namespace EduBook
                 estadisticaEstudianteInvitadoLibroMasVisto.BringToFront();
             }
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form InicioAdministrador = new InicioAdministrador();
+            InicioAdministrador.Show();
+        }
     }
 }

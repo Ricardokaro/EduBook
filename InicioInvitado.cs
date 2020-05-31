@@ -49,5 +49,12 @@ namespace EduBook
             Form ConsultarEstadisticasInvitado = new BotonRegresa();
             ConsultarEstadisticasInvitado.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form IniciarSesion = new IniciarSesion();
+            IniciarSesion.Show();
+        }
     }
 }
