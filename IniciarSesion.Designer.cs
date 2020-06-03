@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IniciarSesion));
             this.label1 = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.TextUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TextContraseña = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.BotonIngresar = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonIngresar)).BeginInit();
             this.SuspendLayout();
@@ -76,8 +79,6 @@
             this.TextUsuario.TabIndex = 4;
             this.TextUsuario.Text = "Ingrese Usuario";
             this.TextUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
-           
             // 
             // TextContraseña
             // 
@@ -98,7 +99,6 @@
             this.TextContraseña.TabIndex = 4;
             this.TextContraseña.Text = "Ingrese contr";
             this.TextContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
             // 
             // BotonIngresar
             // 
@@ -111,11 +111,24 @@
             this.BotonIngresar.TabStop = false;
             this.BotonIngresar.Click += new System.EventHandler(this.BotonIngresar_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(60, 408);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(228, 23);
+            this.progressBar1.TabIndex = 6;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // IniciarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 407);
+            this.ClientSize = new System.Drawing.Size(351, 450);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.BotonIngresar);
             this.Controls.Add(this.TextContraseña);
             this.Controls.Add(this.TextUsuario);
@@ -141,6 +154,8 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextUsuario;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextContraseña;
         private System.Windows.Forms.PictureBox BotonIngresar;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

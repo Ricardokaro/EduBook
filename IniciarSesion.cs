@@ -24,11 +24,14 @@ namespace EduBook
         private void Form1_Load(object sender, EventArgs e)
         {
             usuarioService.EliminarSession();
+            progressBar1.Visible = false;
         }
 
         private void BotonIngresar_Click(object sender, EventArgs e)
         {
-            
+            progressBar1.Visible = true;
+            timer1.Start();
+
             Usuario usuario = usuarioService.Login(TextUsuario.Text, TextContraseña.Text);
 
             if (usuario == null)
@@ -60,8 +63,18 @@ namespace EduBook
                     InicioInvitado inicio = new InicioInvitado();
                     inicio.Show();
                 }
-            }    
+            }
+            timer1.Stop();
         }
-       
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Increment(1);
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+            ProgressBar progressBar = new ProgressBar();
+        }
     }
     }

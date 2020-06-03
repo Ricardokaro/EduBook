@@ -82,6 +82,7 @@
             this.EstadisticaDescargaEstudiantes.Size = new System.Drawing.Size(138, 28);
             this.EstadisticaDescargaEstudiantes.TabIndex = 4;
             this.EstadisticaDescargaEstudiantes.Text = "Descargas";
+            this.EstadisticaDescargaEstudiantes.Click += new System.EventHandler(this.EstadisticaDescargaEstudiantes_Click);
             // 
             // BotonRegresar
             // 

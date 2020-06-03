@@ -16,6 +16,7 @@ namespace DAL
         private SqlCommand Comando;
         List<Libro> lista;
         List<LibroMasVisto> listaLibroMasVisto;
+        List<LibroMasDescargado> listaLibroMasDescargado;
         public LibroRepository(SqlConnection conexion)
         {
             this.Conexion = conexion;
@@ -62,6 +63,23 @@ namespace DAL
             return respuesta;
         }
 
+        public string GuardarDescargaLibro(LibroDescargado libroDescargado)
+        {
+            string respuesta = "";
+            using (var comando = Conexion.CreateCommand())
+            {
+                comando.CommandText = "insert into libro_descargado(idlibro, idusuario, fecha) " +
+                                                "values(@idlibro,@idusuario,@fecha)";
+                comando.Parameters.Add("@idlibro", SqlDbType.Int).Value = libroDescargado.idlibro;
+                comando.Parameters.Add("@idusuario", SqlDbType.Int).Value = libroDescargado.idusuario;
+                comando.Parameters.Add("@fecha", SqlDbType.DateTime).Value = libroDescargado.fecha;
+
+                respuesta = comando.ExecuteNonQuery() == 1 ? "OK" : "NO guardo la descarga del libro";
+
+            }
+            return respuesta;
+        }
+
         private Libro MapearLibro(SqlDataReader reader)
         {
             Libro libro = new Libro();
@@ -86,6 +104,16 @@ namespace DAL
 
             libro.nombre = (string)reader["nombre"];
             libro.total = (int)reader["total"];           
+
+            return libro;
+        }
+
+        private LibroMasDescargado MapearLibroMasDescargado(SqlDataReader reader)
+        {
+            LibroMasDescargado libro = new LibroMasDescargado();
+
+            libro.nombre = (string)reader["nombre"];
+            libro.total = (int)reader["total"];
 
             return libro;
         }
@@ -162,6 +190,29 @@ namespace DAL
                     listaLibroMasVisto.Add(libro);
                 }
                 return listaLibroMasVisto;
+            }
+        }
+
+        public IList<LibroMasDescargado> ConsultarLibroMasDescargadoPorEstudiante()
+        {
+            listaLibroMasDescargado = new List<LibroMasDescargado>();
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "select top 8 l.nombre, count(*) as total   from libro l inner join libro_descargado ld "
+                                       + "on l.idlibro = ld.idlibro "
+                                       + "inner join usuario u on u.idusuario = ld.idusuario "
+                                       + "where u.tipo_usuario = 'Estudiante' "
+                                       + "group by(l.nombre) "
+                                       + "order by total desc";
+
+                SqlDataReader reader = Comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    LibroMasDescargado libro = new LibroMasDescargado();
+                    libro = MapearLibroMasDescargado(reader);
+                    listaLibroMasDescargado.Add(libro);
+                }
+                return listaLibroMasDescargado;
             }
         }
 

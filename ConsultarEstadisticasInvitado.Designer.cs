@@ -33,12 +33,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Regresar = new System.Windows.Forms.Label();
             this.EstadisticasDescarga = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.EstadisticasLibro = new System.Windows.Forms.Label();
+            this.PanelContenedor = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.BotonEstadisticasDescargas = new System.Windows.Forms.PictureBox();
             this.BotonEstaditicasLibro = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.PanelContenedor = new MetroFramework.Controls.MetroPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonEstadisticasDescargas)).BeginInit();
@@ -93,16 +93,7 @@
             this.EstadisticasDescarga.Size = new System.Drawing.Size(138, 28);
             this.EstadisticasDescarga.TabIndex = 4;
             this.EstadisticasDescarga.Text = "Descargas";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 284);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.EstadisticasDescarga.Click += new System.EventHandler(this.EstadisticasDescarga_Click);
             // 
             // EstadisticasLibro
             // 
@@ -115,6 +106,29 @@
             this.EstadisticasLibro.TabIndex = 4;
             this.EstadisticasLibro.Text = "Libros";
             this.EstadisticasLibro.Click += new System.EventHandler(this.EstadisticasLibro_Click);
+            // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.HorizontalScrollbarBarColor = true;
+            this.PanelContenedor.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelContenedor.HorizontalScrollbarSize = 10;
+            this.PanelContenedor.Location = new System.Drawing.Point(249, 63);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(449, 305);
+            this.PanelContenedor.TabIndex = 11;
+            this.PanelContenedor.VerticalScrollbarBarColor = true;
+            this.PanelContenedor.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelContenedor.VerticalScrollbarSize = 10;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(4, 284);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
             // 
             // BotonEstadisticasDescargas
             // 
@@ -145,19 +159,6 @@
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 4;
             this.Logo.TabStop = false;
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.HorizontalScrollbarBarColor = true;
-            this.PanelContenedor.HorizontalScrollbarHighlightOnWheel = false;
-            this.PanelContenedor.HorizontalScrollbarSize = 10;
-            this.PanelContenedor.Location = new System.Drawing.Point(249, 63);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(449, 305);
-            this.PanelContenedor.TabIndex = 11;
-            this.PanelContenedor.VerticalScrollbarBarColor = true;
-            this.PanelContenedor.VerticalScrollbarHighlightOnWheel = false;
-            this.PanelContenedor.VerticalScrollbarSize = 10;
             // 
             // BotonRegresa
             // 

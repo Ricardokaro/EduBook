@@ -83,6 +83,7 @@
             this.label5.Size = new System.Drawing.Size(138, 28);
             this.label5.TabIndex = 4;
             this.label5.Text = "Descargas";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox4
             // 

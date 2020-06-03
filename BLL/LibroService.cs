@@ -58,6 +58,24 @@ namespace BLL
 
         }
 
+        public string GuardarDescargaLibro(LibroDescargado libroDescargado)
+        {
+            try
+            {
+                conexion.Open();
+                return Repositorio.GuardarDescargaLibro(libroDescargado);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+        }
+
         public Libro BuscarLibro(string codigo)
         {
             conexion.Open();
@@ -136,6 +154,26 @@ namespace BLL
             catch (Exception e)
             {
                 return listaLibrosMasVistos;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+
+        public IList<LibroMasDescargado> ConsultarLibroMasDescargadoPorEstudiante()
+        {
+            IList<LibroMasDescargado> listaLibroMasDescargados = new List<LibroMasDescargado>();
+            try
+            {
+                conexion.Open();
+                listaLibroMasDescargados = Repositorio.ConsultarLibroMasDescargadoPorEstudiante();
+                return listaLibroMasDescargados;
+            }
+            catch (Exception e)
+            {
+                return null;
             }
             finally
             {

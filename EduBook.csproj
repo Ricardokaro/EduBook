@@ -102,6 +102,12 @@
     <Compile Include="EstadisticaEstudianteInvitadoLibroMasVisto.Designer.cs">
       <DependentUpon>EstadisticaEstudianteInvitadoLibroMasVisto.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstadisticaEstudianteLibroMasDescargado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EstadisticaEstudianteLibroMasDescargado.Designer.cs">
+      <DependentUpon>EstadisticaEstudianteLibroMasDescargado.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstadisticaInvitado.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EstadisticaEstudianteInvitadoLibroMasVisto.resx">
       <DependentUpon>EstadisticaEstudianteInvitadoLibroMasVisto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticaEstudianteLibroMasDescargado.resx">
+      <DependentUpon>EstadisticaEstudianteLibroMasDescargado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstadisticaInvitado.resx">
       <DependentUpon>EstadisticaInvitado.cs</DependentUpon>

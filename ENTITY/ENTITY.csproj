@@ -45,6 +45,8 @@
     <Compile Include="Editorial.cs" />
     <Compile Include="Genero.cs" />
     <Compile Include="Libro.cs" />
+    <Compile Include="LibroDescargado.cs" />
+    <Compile Include="LibroMasDescargado.cs" />
     <Compile Include="LibroMasVisto.cs" />
     <Compile Include="LibroVisto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

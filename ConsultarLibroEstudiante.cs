@@ -118,6 +118,24 @@ namespace EduBook
             }
         }
 
+        private void guardarDescargaLibro()
+        {
+            string respuesta = "";
+            LibroDescargado libroDescargado = new LibroDescargado();
+            libroDescargado.idlibro = libro.idlibro;
+            libroDescargado.idusuario = usuario.idusuario;
+            libroDescargado.fecha = DateTime.Now;
+            respuesta = libroService.GuardarDescargaLibro(libroDescargado);
+            if (respuesta.Equals("OK"))
+            {
+                MessageBox.Show("Descargo con exito el libro...", "EduBook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(respuesta, "EduBook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void CargarPerfil() 
         {
             usuario = usuarioService.ConsultarSession();          
@@ -159,7 +177,20 @@ namespace EduBook
 
         private void BotonDescargar_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "Pdf Libro|*.pdf";
+            saveFileDialog1.Title = "Descargar Libro";
+            saveFileDialog1.FileName = libro.nombre_archivo;
+            saveFileDialog1.ShowDialog();
 
+            if (saveFileDialog1.FileName != "") 
+            {                               
+                 if (saveFileDialog1.FilterIndex == 1)
+                 { 
+                     File.WriteAllBytes(saveFileDialog1.FileName, libro.archivo_pdf);
+                    this.guardarDescargaLibro();
+                }
+            }
         }
     }
 }

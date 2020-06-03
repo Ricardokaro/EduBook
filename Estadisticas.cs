@@ -43,5 +43,20 @@ namespace EduBook
             Form InicioAdministrador = new InicioAdministrador();
             InicioAdministrador.Show();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            EstadisticaEstudianteLibroMasDescargado estadisticaEstudianteLibroMasDescargado = new EstadisticaEstudianteLibroMasDescargado();
+            if (PanelContenedor.Contains(estadisticaEstudianteLibroMasDescargado) == false)
+            {
+                PanelContenedor.Controls.Add(estadisticaEstudianteLibroMasDescargado);
+                estadisticaEstudianteLibroMasDescargado.Dock = DockStyle.Fill;
+                estadisticaEstudianteLibroMasDescargado.BringToFront();
+            }
+            else
+            {
+                estadisticaEstudianteLibroMasDescargado.BringToFront();
+            }
+        }
     }
 }
